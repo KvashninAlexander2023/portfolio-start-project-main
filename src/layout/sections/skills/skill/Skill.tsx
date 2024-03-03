@@ -14,10 +14,15 @@ export const Skill = (props: SkillPropsType) => {
   );
 };
 
-const StyledSkill = styled.div``;
+const StyledSkill = styled.div`
+width: 180px;
+`;
 const SkillTitle = styled.h3`
-  border: 1px solid black;
+  border: 1px solid #abb2bf;
+  margin: 0
+
 `;
 const SkillText = styled.p`
-  border: 1px solid black;
+  border: 1px solid #abb2bf;
+  margin: 0
 `;

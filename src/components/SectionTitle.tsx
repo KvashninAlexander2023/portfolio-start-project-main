@@ -6,15 +6,15 @@ export const SectionTitle = styled.h2`
     /* display: block; */
     width: 50px; /* Ширина решетки */
     height: 5px; /* Высота решетки */
-    color: #eb2ac1; /* Цвет решетки */
-    margin-bottom: 0.5em; /* Расстояние между решеткой и заголовком */
+    color: #C778DD; /* Цвет решетки */
+    margin-right: 0.3em; /* Расстояние между решеткой и заголовком */
   }
   &::after{
     content: '----------------';
     /* display: block; */
     width: 50px; /* Ширина решетки */
     height: 5px; /* Высота решетки */
-    color: #eb2ac1; /* Цвет решетки */
-    margin-bottom: 0.5em; /* Расстояние между решеткой и заголовком */
+    color: #C778DD; /* Цвет решетки */
+    margin-left: 0.5em; /* Расстояние между решеткой и заголовком */
   }
 `;

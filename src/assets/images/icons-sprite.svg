@@ -23,7 +23,7 @@
   <g id="logo">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0.5H8V4.5H4H0V8.5V12.5V16.5H4H8V12.5H12H16V8.5V4.5V0.5H12ZM4 12.5H8V8.5H12V4.5H8V8.5H4V12.5Z" fill="white"/>
   </g>
-  
+
   <!-- # в заголовке -->
   <g id="lattice">
     <path d="M14.072 8.52L13.176 15.32H15.544V17.88H12.824L12.168 23H9.16L9.832 17.88H5.784L5.112 23H2.104L2.776 17.88H0.488V15.32H3.112L4.04 8.52H1.672V5.944H4.376L5.032 0.919998H8.056L7.352 5.944H11.416L12.088 0.919998H15.096L14.408 5.944H16.728V8.52H14.072ZM6.12 15.32H10.168L11.08 8.52H7.016L6.12 15.32Z" fill="#C778DD"/>
@@ -45,4 +45,69 @@
   <g id="twitter">
     <path d="M11.2249 26C19.9045 26 24.6526 18.6884 24.6526 12.3588C24.6526 12.1542 24.6526 11.9467 24.644 11.7419C25.5684 11.0616 26.3662 10.2194 27 9.25464C26.1365 9.6416 25.2214 9.89673 24.2847 10.0116C25.2715 9.41187 26.0105 8.46826 26.3647 7.3562C25.4375 7.91455 24.4226 8.30664 23.3645 8.51514C22.6533 7.74487 21.7119 7.23474 20.6865 7.06348C19.6611 6.89233 18.6089 7.06958 17.6926 7.56799C16.7764 8.06641 16.0474 8.85803 15.6184 9.82031C15.1897 10.7825 15.0847 11.8617 15.3203 12.8907C13.4441 12.795 11.6084 12.2994 9.93262 11.4362C8.25684 10.5729 6.77832 9.36108 5.59277 7.87939C4.99097 8.93616 4.80737 10.1862 5.0791 11.3756C5.35083 12.5649 6.05762 13.6046 7.05615 14.2834C6.30786 14.2576 5.57617 14.0533 4.91992 13.6873L4.91992 13.7529C4.92139 14.86 5.29858 15.9326 5.98779 16.7896C6.67725 17.6465 7.63647 18.2351 8.70361 18.4559C8.29858 18.5693 7.88013 18.626 7.45996 18.624C7.16382 18.6249 6.86841 18.597 6.57739 18.5406C6.87891 19.4937 7.46631 20.3269 8.25684 20.9236C9.04736 21.5203 10.0017 21.8507 10.9863 21.8684C9.31372 23.204 7.2478 23.9282 5.12134 23.9247C4.74658 23.9264 4.37207 23.9044 4 23.859C6.15845 25.2579 8.66504 26.0009 11.2249 26Z" fill="#ABB2BF" fill-opacity="1.000000" fill-rule="nonzero"/>
   </g>
+
+   <!-- ---------- Skills block SVG --------------- -->
+  <symbol id="blockSkill">
+    
+      <circle id="Ellipse 23" cx="2.000000" cy="40.000000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 21" cx="16.750000" cy="40.000000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 22" cx="31.500000" cy="40.000000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 20" cx="46.250000" cy="40.000000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 36" cx="61.000000" cy="40.000000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 25" cx="2.000000" cy="54.750000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 26" cx="16.750000" cy="54.750000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 24" cx="31.500000" cy="54.750000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 19" cx="46.250000" cy="54.750000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 36" cx="61.000000" cy="54.750000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 29" cx="2.000000" cy="69.500000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 30" cx="16.750000" cy="69.500000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 28" cx="31.500000" cy="69.500000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 19" cx="46.250000" cy="69.500000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 36" cx="61.000000" cy="69.500000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 33" cx="2.000000" cy="84.250000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 34" cx="16.750000" cy="84.250000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 32" cx="31.500000" cy="84.250000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 19" cx="46.250000" cy="84.250000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 36" cx="61.000000" cy="84.250000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 33" cx="2.000000" cy="99.000000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 34" cx="16.750000" cy="99.000000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 32" cx="31.500000" cy="99.000000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 19" cx="46.250000" cy="99.000000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 36" cx="61.000000" cy="99.000000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 23" cx="179.000000" cy="145.000000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 21" cx="193.750000" cy="145.000000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 22" cx="208.500000" cy="145.000000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 20" cx="223.250000" cy="145.000000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 36" cx="238.000000" cy="145.000000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 25" cx="179.000000" cy="159.750000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 26" cx="193.750000" cy="159.750000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 24" cx="208.500000" cy="159.750000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 19" cx="223.250000" cy="159.750000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 36" cx="238.000000" cy="159.750000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 29" cx="179.000000" cy="174.500000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 30" cx="193.750000" cy="174.500000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 28" cx="208.500000" cy="174.500000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 19" cx="223.250000" cy="174.500000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 36" cx="238.000000" cy="174.500000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 33" cx="179.000000" cy="189.250000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 34" cx="193.750000" cy="189.250000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 32" cx="208.500000" cy="189.250000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 19" cx="223.250000" cy="189.250000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 36" cx="238.000000" cy="189.250000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 33" cx="179.000000" cy="204.000000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 34" cx="193.750000" cy="204.000000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 32" cx="208.500000" cy="204.000000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 19" cx="223.250000" cy="204.000000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <circle id="Ellipse 36" cx="238.000000" cy="204.000000" r="2.000000" fill="#ABB2BF" fill-opacity="1.000000"/>
+      <rect id="Rectangle 23" x="297.500000" y="193.500000" width="51.000000" height="51.000000" stroke="#ABB2BF" stroke-opacity="1.000000" stroke-width="1.000000"/>
+      <rect id="Rectangle 24" x="227.500000" y="0.500000" width="85.000000" height="85.000000" stroke="#ABB2BF" stroke-opacity="1.000000" stroke-width="1.000000"/>
+      <mask id="mask_1103_3641" fill="white">
+        <path id="Union" d="M71.5 169L128 169L128 253.75L71.5 253.75L71.5 225.5L99.75 225.5L99.75 197.25L71.5 197.25L71.5 169Z" clip-rule="evenodd" fill="" fill-opacity="1.000000" fill-rule="evenodd"/>
+      </mask>
+      <path id="Union" d="M98.75 225.5L71.5 225.5L71.5 253.75L128 253.75L128 169L71.5 169L71.5 197.25L99.75 197.25L99.75 225.5L98.75 225.5ZM72.5 196.25L100.75 196.25L100.75 226.5L72.5 226.5L72.5 252.75L127 252.75L127 170L72.5 170L72.5 196.25Z" clip-rule="evenodd" fill="#C778DD" fill-opacity="1.000000" fill-rule="evenodd"/>
+      <mask id="mask_1103_3647" fill="white">
+        <path id="Union" d="M15 197.25L71.5 197.25L71.5 225.5L43.25 225.5L43.25 253.75L71.5 253.75L71.5 282L15 282L15 197.25Z" clip-rule="evenodd" fill="" fill-opacity="1.000000" fill-rule="evenodd"/>
+      </mask>
+      <path id="Union" d="M72.5 196.25L14 196.25L14 283L72.5 283L72.5 252.75L44.25 252.75L44.25 226.5L72.5 226.5L72.5 196.25ZM44.25 225.5L71.5 225.5L71.5 197.25L15 197.25L15 282L71.5 282L71.5 253.75L43.25 253.75L43.25 225.5L44.25 225.5Z" clip-rule="evenodd" fill="#C778DD" fill-opacity="1.000000" fill-rule="evenodd"/>
+  </symbol>
 </svg>
