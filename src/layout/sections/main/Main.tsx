@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import photo from "../../../assets/images/image-preview.png";
+import photo from "../../../assets/images/foto1.png";
+import dots from "../../../assets/images/DotsFoto.svg";
+import phologoto2 from "../../../assets/images/LogoFoto.svg";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 
 export const Main = () => {
@@ -16,7 +18,7 @@ export const Main = () => {
           <button>Contact me!!</button>
         </div>
         <FlexWrapper justify="center" direction="column" align="center">
-          <Photo src={photo} alt="web designer photo" />
+          <Photo></Photo>
           <span>Currently working on Portfolio</span>
         </FlexWrapper>
       </FlexWrapper>
@@ -29,8 +31,15 @@ const StyledMain = styled.div`
   background-color: #8f8b8b; //#282c33
 `;
 
-const Photo = styled.img`
-  width: 457px;
-  height: 386px;
-  object-fit: cover;
+const Photo = styled.div`
+  width: 460px;
+  height: 385px;
+  background-image: url(${photo});
+  background-size: cover;
 `;
+
+/* src={photo} alt="web designer photo" */
+// clip-path: inset(0 0 30% 0)
+ /* background-position: -300px -110px; */
+  /* background-repeat: no-repeat; */
+  /* object-fit: cover; */
