@@ -13,7 +13,8 @@ export const Header = () => {
 };
 
 const StyledHeader = styled.header`
-  background-color: #75ec85;
+  background-color: ${(props) => props.theme.color.primary};
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
 `;

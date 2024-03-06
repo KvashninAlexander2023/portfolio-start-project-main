@@ -29,5 +29,14 @@ const StyledMenu = styled.nav`
   ul {
     display: flex;
     gap: 30px;
+  };
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  };
+
+  a:hover{
+    color: #fff
   }
 `;
