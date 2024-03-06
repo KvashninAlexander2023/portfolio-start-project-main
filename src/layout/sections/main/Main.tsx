@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import photo from "../../../assets/images/foto1.png";
 import dots from "../../../assets/images/DotsFoto.svg";
-import phologoto2 from "../../../assets/images/LogoFoto.svg";
+import photologo from "../../../assets/images/LogoFoto.svg";
+import men from "../../../assets/images/Men.png";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 
 export const Main = () => {
@@ -18,7 +19,9 @@ export const Main = () => {
           <button>Contact me!!</button>
         </div>
         <FlexWrapper justify="center" direction="column" align="center">
-          <Photo></Photo>
+          <PhotoContainer >
+            <img src={photo} alt='web developer photo'/>
+          </PhotoContainer>
           <span>Currently working on Portfolio</span>
         </FlexWrapper>
       </FlexWrapper>
@@ -28,18 +31,38 @@ export const Main = () => {
 
 const StyledMain = styled.div`
   min-height: 50vh;
-  background-color: #8f8b8b; //#282c33
+  background-color: #282c33; //#8f8b8b;
 `;
 
-const Photo = styled.div`
+const PhotoContainer = styled.div`
   width: 460px;
   height: 385px;
-  background-image: url(${photo});
-  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  & img{
+    width: 100%;
+    /* height: auto; */
+  }
+  &::before {
+    content: url(${photologo});
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    z-index: -1;
+  }
+  &::after {
+    content: url(${dots});
+    position: absolute;
+    bottom: 100px;
+    right: 30px;
+    z-index: 2;
+    background-size: cover;
+  }
 `;
 
 /* src={photo} alt="web designer photo" */
 // clip-path: inset(0 0 30% 0)
- /* background-position: -300px -110px; */
-  /* background-repeat: no-repeat; */
-  /* object-fit: cover; */
+/* background-position: -300px -110px; */
+/* background-repeat: no-repeat; */
+/* object-fit: cover; */
