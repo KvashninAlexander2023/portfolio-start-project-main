@@ -19,8 +19,8 @@ export const Main = () => {
           <button>Contact me!!</button>
         </div>
         <FlexWrapper justify="center" direction="column" align="center">
-          <PhotoContainer >
-            <img src={photo} alt='web developer photo'/>
+          <PhotoContainer>
+            <img src={photo} alt="web developer photo" />
           </PhotoContainer>
           <span>Currently working on Portfolio</span>
         </FlexWrapper>
@@ -31,7 +31,7 @@ export const Main = () => {
 
 const StyledMain = styled.div`
   min-height: 50vh;
-  background-color: #282c33; //#8f8b8b;
+  background-color: ${(props) => props.theme.color.primary};
 `;
 
 const PhotoContainer = styled.div`
@@ -40,16 +40,19 @@ const PhotoContainer = styled.div`
   overflow: hidden;
   position: relative;
   z-index: 1;
-  & img{
+  & img {
     width: 100%;
     /* height: auto; */
   }
   &::before {
     content: url(${photologo});
     position: absolute;
+    /* width: 40px; */
+    transform: scale(0.9);
     top: 100px;
-    left: 50px;
+    left: 45px;
     z-index: -1;
+   
   }
   &::after {
     content: url(${dots});

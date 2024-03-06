@@ -1,5 +1,11 @@
 import { createGlobalStyle } from "styled-components";
 
+
+type GlobalStylesType = {
+  color?: string,
+  secondary?: string,
+}
+
 export const GlobalStyles = createGlobalStyle`
   *,
   *::before,
@@ -16,6 +22,9 @@ export const GlobalStyles = createGlobalStyle`
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color:#abb2bf;
+  max-width: 1366px;
+  margin: 0 auto;
 }
 
 code {
