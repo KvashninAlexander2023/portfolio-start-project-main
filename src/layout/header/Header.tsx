@@ -13,7 +13,7 @@ export const Header = () => {
 };
 
 const StyledHeader = styled.header`
-  background-color: ${(props) => props.theme.color.primary};
+  background-color: ${(props) => props.theme.color.colorBG};
   display: flex;
   justify-content: space-around;
   align-items: center;

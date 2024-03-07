@@ -31,7 +31,7 @@ export const Main = () => {
 
 const StyledMain = styled.div`
   min-height: 50vh;
-  background-color: ${(props) => props.theme.color.primary};
+  background-color: ${(props) => props.theme.color.colorBG};
 `;
 
 const PhotoContainer = styled.div`

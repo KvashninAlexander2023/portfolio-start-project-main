@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { myTheme } from "../../styles/Theme.styled";
 
 export const Menu = () => {
   return (
@@ -33,10 +34,10 @@ const StyledMenu = styled.nav`
 
   a {
     color: inherit;
-    text-decoration: none;
+  
   };
 
   a:hover{
-    color: #fff
+    color: ${myTheme.color.colorHover}
   }
 `;

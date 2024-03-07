@@ -1,7 +1,8 @@
 export const myTheme = {
   color: {
-    primary: "#282c33",
-    secondary: "#abb2bf",
-    lineColor: "#C778DD",
+    colorBG: "#282c33",
+    colorText: "#abb2bf",
+    colorAccent: "#C778DD",
+    colorHover: "#fff",
   },
 };
