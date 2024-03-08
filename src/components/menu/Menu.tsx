@@ -6,21 +6,24 @@ export const Menu = () => {
   return (
     <StyledMenu>
       <ul>
-        <li>
-          <a href="">home</a>
-        </li>
-        <li>
-          <a href="">works</a>
-        </li>
-        <li>
-          <a href="">about-me</a>
-        </li>
-        <li>
-          <a href="">contacts</a>
-        </li>
-        <li>
-          <a href="">EN</a>
-        </li>
+        <ListItem>
+          <Link href="">home</Link>
+        </ListItem>
+        <ListItem>
+          <Link href="">works</Link>
+        </ListItem>
+        <ListItem>
+          <Link href="">about-me</Link>
+        </ListItem>
+        <ListItem>
+          <Link href="">contacts</Link>
+        </ListItem>
+        <ListItem>
+          <select>
+            <option value="en">EN</option>
+            <option value="ru">RU</option>
+          </select>
+        </ListItem>
       </ul>
     </StyledMenu>
   );
@@ -31,12 +34,32 @@ const StyledMenu = styled.nav`
     display: flex;
     gap: 30px;
   }
+`;
 
-  a {
-    color: inherit;
+const ListItem = styled.li`
+  select {
+    background-color: ${(props) => props.theme.colors.colorBG};
+    border: none;
+    outline: none;
+    /* appearance: none; */
+    color: ${(props) => props.theme.colors.colorText};
+    /* background-color: transparent; */
+    /* & option {
+      border: none;
+      background-color: transparent;
+
+    } */
   }
-
-  a:hover {
+`;
+const Link = styled.a`
+  font-family: "Fira Code", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: inherit;
+  &:hover {
     color: ${myTheme.colors.colorHover};
+    font-weight: 500;
   }
+
+  /* text-align: center; */
 `;

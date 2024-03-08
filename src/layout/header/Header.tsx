@@ -9,7 +9,7 @@ export const Header = () => {
   return (
     <StyledHeader>
       <Container>
-        <FlexWrapper justify="space-around" align="center">
+        <FlexWrapper justify="space-between" align="center">
           <Logo />
           <Menu />
         </FlexWrapper>
@@ -20,4 +20,10 @@ export const Header = () => {
 
 const StyledHeader = styled.header`
   background-color: ${(props) => props.theme.colors.colorBG};
+  padding: 32px 0 8px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
 `;
