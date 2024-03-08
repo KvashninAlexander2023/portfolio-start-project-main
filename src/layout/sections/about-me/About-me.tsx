@@ -10,22 +10,22 @@ export const AboutMe = () => {
     <StyledAboutMe>
       <SectionTitle>about-me</SectionTitle>
       <FlexWrapper>
-          <TextConteiner>
-            <span>Hello, i'm Alexander</span>
+        <TextConteiner>
+          <span>Hello, i'm Alexander</span>
 
-            <p>
-              I’m a self-taught front-end developer based in Kyiv, Ukraine. I
-              can develop responsive websites from scratch and raise them into
-              modern user-friendly web experiences.
-            </p>
-            <p>
-              Transforming my creativity and knowledge into a websites has been
-              my passion for over a year. I have been helping various clients to
-              establish their presence online. I always strive to learn about
-              the newest technologies and frameworks.
-            </p>
-            <button>Read more</button>
-          </TextConteiner>
+          <p>
+            I’m a self-taught front-end developer based in Kyiv, Ukraine. I can
+            develop responsive websites from scratch and raise them into modern
+            user-friendly web experiences.
+          </p>
+          <p>
+            Transforming my creativity and knowledge into a websites has been my
+            passion for over a year. I have been helping various clients to
+            establish their presence online. I always strive to learn about the
+            newest technologies and frameworks.
+          </p>
+          <button>Read more</button>
+        </TextConteiner>
         <PhotoContainer>
           <img src={photoProfile} alt="web developer photo" />
         </PhotoContainer>
@@ -36,10 +36,10 @@ export const AboutMe = () => {
 
 const StyledAboutMe = styled.div`
   min-height: 70vh;
-  background-color: ${(props) => props.theme.color.colorBG};
+  background-color: ${(props) => props.theme.colors.colorBG};
 `;
 const TextConteiner = styled.div`
-max-width: 60%
+  max-width: 60%;
 `;
 
 const PhotoContainer = styled.div`

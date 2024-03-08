@@ -20,11 +20,10 @@ const QuoteConteiner = styled.div`
   padding-top: 50px;
   text-align: center;
   min-height: 20vh;
-  background-color: ${(props) => props.theme.color.colorBG};
+  background-color: ${(props) => props.theme.colors.colorBG};
   position: relative;
 
   blockquote {
-
     /* display: flex;
     align-items:center;
     justify-content:center;
@@ -34,11 +33,11 @@ const QuoteConteiner = styled.div`
 
     p {
       padding: 15px;
-      border: 1px solid ${(props) => props.theme.color.colorText};
+      border: 1px solid ${(props) => props.theme.colors.colorText};
       /* display: inline; */
     }
     footer {
-      border: 1px solid ${(props) => props.theme.color.colorText};
+      border: 1px solid ${(props) => props.theme.colors.colorText};
       padding: 10px;
       /* display: inline-block; */
     }
@@ -47,7 +46,7 @@ const QuoteConteiner = styled.div`
     content: url(${doubleQuote});
     width: 40px; // увеличивает контейнер
     position: absolute;
-    background-color: ${(props) => props.theme.color.colorBG};
+    background-color: ${(props) => props.theme.colors.colorBG};
     top: 40px;
     left: 450px;
     z-index: 2;
@@ -56,7 +55,7 @@ const QuoteConteiner = styled.div`
     content: url(${doubleQuote});
     width: 40px; // увеличивает контейнер
     position: absolute;
-    background-color: ${(props) => props.theme.color.colorBG};
+    background-color: ${(props) => props.theme.colors.colorBG};
     bottom: 10px;
     right: 450px;
     z-index: 2;

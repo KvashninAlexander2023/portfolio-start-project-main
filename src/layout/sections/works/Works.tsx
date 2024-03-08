@@ -39,7 +39,7 @@ export const Works = () => {
 
 const StyledWorks = styled.section`
   min-height: 70vh;
-  background-color: ${props => props.theme.color.colorBG};
+  background-color: ${(props) => props.theme.colors.colorBG};
 `;
 
 // const TitleLineStyled = styled.div`

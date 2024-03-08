@@ -30,14 +30,13 @@ const StyledMenu = styled.nav`
   ul {
     display: flex;
     gap: 30px;
-  };
+  }
 
   a {
     color: inherit;
-  
-  };
+  }
 
-  a:hover{
-    color: ${myTheme.color.colorHover}
+  a:hover {
+    color: ${myTheme.colors.colorHover};
   }
 `;

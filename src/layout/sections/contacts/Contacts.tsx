@@ -35,7 +35,7 @@ export const Contacts = () => {
 
 const StyledAboutMe = styled.div`
   min-height: 50vh;
-  background-color: ${(props) => props.theme.color.colorBG};
+  background-color: ${(props) => props.theme.colors.colorBG};
 `;
 const TextConteiner = styled(FlexWrapper)`
   /* gap: 100px; */
@@ -46,7 +46,7 @@ const TextConteiner = styled(FlexWrapper)`
   & > div {
     max-width: 500px;
     min-width: 300px;
-    border: 1px solid ${(props) => props.theme.color.colorText};
+    border: 1px solid ${(props) => props.theme.colors.colorText};
     display: flex;
     flex-direction: column;
     align-items: center;

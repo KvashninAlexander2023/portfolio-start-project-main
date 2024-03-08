@@ -1,5 +1,5 @@
 export const myTheme = {
-  color: {
+  colors: {
     colorBG: "#282c33",
     colorText: "#abb2bf",
     colorAccent: "#C778DD",

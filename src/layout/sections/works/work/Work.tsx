@@ -25,7 +25,7 @@ export const Work = (props: WorkPropsType) => {
 
 const StyledWork = styled.div`
   max-width: 330px;
-  border: 1px solid ${(props) => props.theme.color.secondary};
+  border: 1px solid ${(props) => props.theme.colors.secondary};
   /* padding: 0;
   margin: 0; */
 `;
@@ -39,7 +39,7 @@ const Image = styled.img`
 `;
 
 const TechnologyStackUsed = styled.p`
-  border: 1px solid ${(props) => props.theme.color.secondary};
+  border: 1px solid ${(props) => props.theme.colors.secondary};
   /* margin: 0; */
 `;
 const DescriptionGroupsStyled = styled.div`
@@ -48,7 +48,7 @@ const DescriptionGroupsStyled = styled.div`
 
 const Link = styled.a`
   color: inherit;
-  border: 1px solid ${(props) => props.theme.color.lineColor};
+  border: 1px solid ${(props) => props.theme.colors.lineColor};
   text-decoration: none;
   &::after {
     content: "<~>";

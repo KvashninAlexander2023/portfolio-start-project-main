@@ -31,7 +31,7 @@ export const Main = () => {
 
 const StyledMain = styled.div`
   min-height: 50vh;
-  background-color: ${(props) => props.theme.color.colorBG};
+  background-color: ${(props) => props.theme.colors.colorBG};
 `;
 
 const PhotoContainer = styled.div`
@@ -52,7 +52,6 @@ const PhotoContainer = styled.div`
     top: 100px;
     left: 45px;
     z-index: -1;
-   
   }
   &::after {
     content: url(${dots});
