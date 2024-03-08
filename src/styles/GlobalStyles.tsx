@@ -10,9 +10,9 @@ export const GlobalStyles = createGlobalStyle`
   *,
   *::before,
   *::after{
-    margin:0;
-    padding:0;
-    box-sizing:border-box
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
   }
 
   body {
@@ -35,6 +35,8 @@ a{
 ul{
   list-style: none;
 }
-
-
+button{
+  background-color: unset;
+  border: none;
+}
 `;

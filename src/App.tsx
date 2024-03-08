@@ -7,6 +7,7 @@ import { Works } from "./layout/sections/works/Works";
 import { AboutMe } from "./layout/sections/about-me/About-me";
 import { Quote } from "./layout/sections/quote/Quote";
 import { Contacts } from "./layout/sections/contacts/Contacts";
+import { Footer } from "./layout/footer/Footer";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Skills />
       <AboutMe />
       <Contacts />
+      <Footer/>
     </div>
   );
 }
