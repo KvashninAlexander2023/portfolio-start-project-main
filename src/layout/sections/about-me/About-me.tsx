@@ -4,6 +4,7 @@ import photoProfile from "../../../assets/images/fotoProfile.png";
 import dots from "../../../assets/images/DotsFoto.svg";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { SectionTitle } from "../../../components/SectionTitle";
+import { SectionLink } from "../../../components/sectionLink/SectionLink";
 
 export const AboutMe = () => {
   return (
@@ -24,7 +25,7 @@ export const AboutMe = () => {
             establish their presence online. I always strive to learn about the
             newest technologies and frameworks.
           </p>
-          <button>Read more</button>
+          <SectionLink value="Read more"/>
         </TextConteiner>
         <PhotoContainer>
           <img src={photoProfile} alt="web developer photo" />

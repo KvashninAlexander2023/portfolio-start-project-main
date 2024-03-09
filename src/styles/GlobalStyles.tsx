@@ -23,8 +23,9 @@ export const GlobalStyles = createGlobalStyle`
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: ${myTheme.colors.colorText};
-  max-width: 1366px;
-  margin: 0 auto;
+  /* max-width: 1366px;
+  margin: 0 auto; */
+  line-height: 1.2;
 }
 
 
@@ -39,4 +40,9 @@ button{
   background-color: unset;
   border: none;
 }
+
+section{
+  background-color: ${myTheme.colors.colorBG};
+}
+
 `;

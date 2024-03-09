@@ -9,7 +9,11 @@ export const Logo = () => {
       <a href="#">
         <Icon iconId={"logo"} viewBox="0 -8 16 30"/>
       </a>
-      <span>Kvashnin Alexander</span>
+      <Name>Kvashnin Alexander</Name>
     </FlexWrapper>
   );
 };
+
+const Name = styled.span`
+  color:${(props) => props.theme.colors.colorTextAccent};
+`

@@ -4,5 +4,6 @@ export const myTheme = {
     colorText: "#abb2bf",
     colorAccent: "#C778DD",
     colorHover: "#fff",
+    colorTextAccent:"#fff"
   },
 };

@@ -56,9 +56,19 @@ const Link = styled.a`
   font-size: 16px;
   font-weight: 400;
   color: inherit;
+  position: relative;
   &:hover {
     color: ${myTheme.colors.colorHover};
     font-weight: 500;
+  }
+  &::before{
+    content: "#";
+    display: inline-block;
+    color:  ${myTheme.colors.colorAccent};
+    /* position: absolute;
+    left: -10px; */
+
+
   }
 
   /* text-align: center; */

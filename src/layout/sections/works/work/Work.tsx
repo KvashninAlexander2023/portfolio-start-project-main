@@ -39,7 +39,7 @@ const Image = styled.img`
 `;
 
 const TechnologyStackUsed = styled.p`
-  border: 1px solid ${(props) => props.theme.colors.secondary};
+  border: 1px solid ${(props) => props.theme.colors.colorText};
   /* margin: 0; */
 `;
 const DescriptionGroupsStyled = styled.div`
@@ -48,7 +48,7 @@ const DescriptionGroupsStyled = styled.div`
 
 const Link = styled.a`
   color: inherit;
-  border: 1px solid ${(props) => props.theme.colors.lineColor};
+  border: 1px solid ${(props) => props.theme.colors.colorAccent};
   text-decoration: none;
   &::after {
     content: "<~>";
