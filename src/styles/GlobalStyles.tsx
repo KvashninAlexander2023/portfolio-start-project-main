@@ -22,7 +22,7 @@ export const GlobalStyles = createGlobalStyle`
   color: ${myTheme.colors.colorText};
   /* max-width: 1366px;
   margin: 0 auto; */
-  line-height: 1.2;
+  line-height: 1.2em;
 }
 
 
