@@ -21,7 +21,7 @@ export const Quote = () => {
 
 const QuoteConteiner = styled.section`
   display: flex;
-  min-height: 20vh;
+  min-height: 25vh;
 
 `;
 

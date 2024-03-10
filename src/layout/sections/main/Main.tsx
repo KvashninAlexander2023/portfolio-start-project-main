@@ -60,13 +60,16 @@ color:  ${(props) => props.theme.colors.colorAccent};
 `;
 
 const PhotoContainer = styled.div`
-  width: 460px;
-  height: 385px;
+  max-width: 460px;
+  max-height: 385px;
   overflow: hidden;
+  
   position: relative;
   z-index: 1;
   & img {
     width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
     /* height: auto; */
   }
   &::before {

@@ -17,8 +17,8 @@ export const Work = (props: WorkPropsType) => {
       </WrapperImg>
       <TechnologyStackUsed>{props.technologiesStackList}</TechnologyStackUsed>
       <DescriptionGroupsStyled>
-        <Title>{props.descriptionTitle}</Title>
-        <Text>{props.text}</Text>
+        <h3>{props.descriptionTitle}</h3>
+        <p>{props.text}</p>
         <Link href={"#"}>Live </Link>
       </DescriptionGroupsStyled>
     </StyledWork>
@@ -40,34 +40,20 @@ const Image = styled.img`
   height: 100%;
   /* object-fit: contain; */
   object-fit: cover;
+
+  /* padding: 0;
+  margin: 0; */
 `;
 
 const TechnologyStackUsed = styled.p`
   border: 1px solid ${(props) => props.theme.colors.colorText};
-  /* font-weight: 400; */
-  padding: 8px;
-  line-height: 21px;
+  /* margin: 0; */
 `;
-const DescriptionGroupsStyled = styled.div``;
-const Title = styled.h3`
-  color: ${(props) => props.theme.colors.colorTextAccent};
-  padding: 16px;
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 31px;
-`;
-const Text = styled.p`
-  padding: 0 16px;
-  font-weight: 400;
-  line-height: 21px;
+const DescriptionGroupsStyled = styled.div`
+  /* margin: 0; */
 `;
 
 const Link = styled.a`
-  display: inline-block;
-  font-weight: 500;
-  line-height: 21px;
-  padding: 8px 16px;
-  margin: 16px;
   color: inherit;
   border: 1px solid ${(props) => props.theme.colors.colorAccent};
   text-decoration: none;
@@ -78,11 +64,3 @@ const Link = styled.a`
     /* width: 10px; */
   }
 `;
-
-// color: rgb(255, 255, 255);
-// font-family: Fira Code;
-// font-size: 16px;
-// font-weight: 500;
-// line-height: 21px;
-// letter-spacing: 0%;
-// text-align: left;

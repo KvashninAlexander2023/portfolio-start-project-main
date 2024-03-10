@@ -1,10 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import { myTheme } from "./Theme.styled";
 
-type GlobalStylesType = {
-  color?: string;
-  secondary?: string;
-};
+
 
 export const GlobalStyles = createGlobalStyle`
   *,

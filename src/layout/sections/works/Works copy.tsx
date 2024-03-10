@@ -11,12 +11,12 @@ export const Works = () => {
   return (
     <StyledWorks>
       <Container>
-        <FlexWrapper direction="column" justify="center" >
+        <FlexWrapper direction="column" justify="center">
           <FlexWrapper justify="space-between" height="none" align="center">
             <SectionTitle width="510px">projects</SectionTitle>
-            <Link href="#">View all ~~&gt;</Link>
+            <a href="#">View all</a>
           </FlexWrapper>
-          <FlexWrapper wrap="wrap" align="flex-start" justify="center" gap="16px">
+          <FlexWrapper wrap="wrap" align="flex-start" justify="center">
             <Work
               technologiesStackList=" SCSS Python Flask"
               src={chertNodes}
@@ -45,13 +45,9 @@ export const Works = () => {
 const StyledWorks = styled.section`
   min-height: 70vh;
   display: flex;
+  /* background-color: ${(props) => props.theme.colors.colorBG}; */
 `;
 
-const Link = styled.a`
-  color: ${(props) => props.theme.colors.colorTextAccent};
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 21px;
-`;
-
-
+// const TitleLineStyled = styled.div`
+//   display: flex;
+// `;
