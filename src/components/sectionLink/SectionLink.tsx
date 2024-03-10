@@ -1,10 +1,10 @@
 import React from "react";
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 
 type SectionLinkType = {
   value: string;
   padding?: string;
-  content?: string;
+  content?: boolean;
 };
 
 export const SectionLink = (props: SectionLinkType) => {
@@ -17,7 +17,7 @@ export const SectionLink = (props: SectionLinkType) => {
 
 type LinkType = {
   padding?: string;
-  content?: string;
+  content?: boolean;
 };
 // ${(props) => props.direction || "row"}
 const Link = styled.a<LinkType>`
@@ -26,7 +26,14 @@ const Link = styled.a<LinkType>`
   text-decoration: none;
   padding: ${(props) => props.padding || "8px 16px"};
   margin-top: 25px;
-
+    ${(props) =>
+    props.content &&
+    css<LinkType>`
+      &:after {
+        content: "<~>";
+        display: inline-block;
+      }
+    `}
 `;
 
   /* ${(props) =>

@@ -7,19 +7,19 @@ export const Menu = () => {
     <StyledMenu>
       <ul>
         <ListItem>
-          <Link href="">home</Link>
+          <Link href="#">home</Link>
         </ListItem>
         <ListItem>
-          <Link href="">works</Link>
+          <Link href="#">works</Link>
         </ListItem>
         <ListItem>
-          <Link href="">about-me</Link>
+          <Link href="#">about-me</Link>
         </ListItem>
         <ListItem>
-          <Link href="">contacts</Link>
+          <Link href="#">contacts</Link>
         </ListItem>
         <ListItem>
-          <select>
+          <select >
             <option value="en">EN</option>
             <option value="ru">RU</option>
           </select>
