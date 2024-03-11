@@ -2,53 +2,131 @@ import React from "react";
 import styled from "styled-components";
 import { Icon } from "../../components/icon/Icon";
 import { Logo } from "../../components/logo/Logo";
+import { Container } from "../../components/Container";
 
 export const Footer = () => {
   return (
     <StyledFooter>
-      <ProfessionDescription>
-        <Logo />
-        <span>Web designer and front-end developer</span>
-      </ProfessionDescription>
-      <SocialList>
-        <span>Media</span>
-        <SocialItem>
-          <SocialLink>
-            <Icon iconId="github" />
-          </SocialLink>
-        </SocialItem>
-        <SocialItem>
-          <SocialLink>
-            <Icon iconId="telegram" />
-          </SocialLink>
-        </SocialItem>
-        <SocialItem>
-          <SocialLink>
-            <Icon iconId="discord" />
-          </SocialLink>
-        </SocialItem>
-      </SocialList>
-      <Copyright>© Copyright 2024. Made by Elias</Copyright>
+      <Container>
+        <WrapperFooterContent>
+          <ProfessionDescription>
+            <Logo height="none" />
+            <Email>elias@elias-dev.ml</Email>
+            <Text>Web designer and front-end developer</Text>
+          </ProfessionDescription>
+          <WrapperMediaContent>
+            <span>Media</span>
+            <SocialList>
+              <SocialItem>
+                <SocialLink>
+                  <Icon iconId="github" />
+                </SocialLink>
+              </SocialItem>
+              <SocialItem>
+                <SocialLink>
+                  <Icon iconId="telegram" />
+                </SocialLink>
+              </SocialItem>
+              <SocialItem>
+                <SocialLink>
+                  <Icon iconId="discord" />
+                </SocialLink>
+              </SocialItem>
+            </SocialList>
+          </WrapperMediaContent>
+          <Copyright>© Copyright 2024. Made by Elias</Copyright>
+        </WrapperFooterContent>
+      </Container>
     </StyledFooter>
   );
 };
 
 const StyledFooter = styled.footer`
-  min-height: 50vh;
+  min-height: 208px;
   background-color: ${(props) => props.theme.colors.colorBG};
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  border-top: 1px solid ${(props) => props.theme.colors.colorText};
+  /* justify-content: space-around;
+  flex-wrap: wrap; */
+`;
+
+const WrapperFooterContent = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
 `;
 
 const ProfessionDescription = styled.div`
-  width: 50%;
+  grid-column: 1/2;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  margin-top: 32px;
+
+
+  Logo{
+    grid-column: 1/2;
+  }
+  /* width: 50%; */
   /* flex-grow: 1; */
 `;
+
+
+const Email = styled.span`
+  grid-column: 2/3;
+  align-self: center;
+  
+`
+const Text = styled.span`
+  color: ${(props) => props.theme.colors.colorTextAccent};
+  grid-column: 1/3;
+  justify-self: left;
+  padding-left: 10px;
+
+`
+
+
+
 const SocialList = styled.ul`
-  width: 50%;
+  grid-column: 2/3;
+  display: flex;
+  gap: 8px;
+  /* width: 50%; */
   /* flex-grow: 1; */
 `;
-const SocialItem = styled.li``;
-const SocialLink = styled.a``;
-const Copyright = styled.small``;
+const SocialItem = styled.li`
+  /* display: inline-block; */
+`;
+const SocialLink = styled.a`
+  color: ${(props) => props.theme.colors.colorText};
+  &:hover {
+    color: ${(props) => props.theme.colors.colorHover};
+  }
+`;
+const Copyright = styled.small`
+  padding: 32px 0;
+  grid-column: 1/3;
+  /* display: grid; */
+  /* justify-content: center; */
+  align-self: end;
+  justify-self: center;
+`;
+
+const WrapperMediaContent = styled.div`
+
+  justify-self: end;
+  margin-top: 32px;
+  span {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 31px;
+    color: ${(props) => props.theme.colors.colorHover};
+    margin-bottom: 12px;
+    
+  }
+`;

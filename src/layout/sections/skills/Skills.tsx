@@ -65,7 +65,7 @@ export const Skills = () => {
 
 const StyledSkills = styled.section`
   background-color: #282c33;
-  min-height: 60vh;
+  min-height: 50vh;
   display: flex;
 `;
 const SectionSVG = styled.div`

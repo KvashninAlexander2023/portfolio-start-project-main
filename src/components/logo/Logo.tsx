@@ -3,9 +3,12 @@ import styled from "styled-components";
 import { Icon } from "../icon/Icon";
 import { FlexWrapper } from "../FlexWrapper";
 
-export const Logo = () => {
+
+
+
+export const Logo = (props: any) => {
   return (
-    <FlexWrapper align="center">
+    <FlexWrapper align="center"  {...props}>
       <a href="#">
         <Icon iconId={"logo"} viewBox="0 -8 16 30"/>
       </a>
@@ -16,4 +19,5 @@ export const Logo = () => {
 
 const Name = styled.span`
   color:${(props) => props.theme.colors.colorTextAccent};
+  white-space: nowrap;
 `
