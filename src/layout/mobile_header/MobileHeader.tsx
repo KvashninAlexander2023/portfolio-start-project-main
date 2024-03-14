@@ -6,7 +6,6 @@ import { Container } from "../../components/Container";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { Icon } from "../../components/icon/Icon";
 import { myTheme } from "../../styles/Theme.styled";
-import { MobileMenu } from "../../components/mobile_menu/MobileMenu";
 
 export const Header = () => {
   return (
@@ -26,7 +25,6 @@ export const Header = () => {
         <FlexWrapper justify="space-between" align="center">
           <Logo />
           <Menu />
-          <MobileMenu/>
         </FlexWrapper>
       </Container>
     </StyledHeader>
@@ -34,14 +32,14 @@ export const Header = () => {
 };
 
 const StyledHeader = styled.header`
-  background-color: ${(props) => `${props.theme.colors.colorBG}9`};
+  background-color: ${(props) => `${props.theme.colors.colorBG}99`};
   padding: 32px 0 8px 0;
-  /* backdrop-filter: blur(5px); //задает размытие background */
+  backdrop-filter: blur(5px); //задает размытие background
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 888;
+  z-index: 9999;
 `;
 
 const SocialIcons = styled.div`

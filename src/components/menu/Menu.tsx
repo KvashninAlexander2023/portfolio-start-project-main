@@ -34,9 +34,15 @@ const StyledMenu = styled.nav`
     display: flex;
     gap: 30px;
   }
+
+  @media ${myTheme.media.tablet} {
+    display: none;
+  }
 `;
 
-const ListItem = styled.li`
+
+
+const ListItem = styled.li<{props?: "any"}>`
   select {
     background-color: ${(props) => props.theme.colors.colorBG};
     border: none;

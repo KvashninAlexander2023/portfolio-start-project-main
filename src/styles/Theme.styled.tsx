@@ -4,6 +4,11 @@ export const myTheme = {
     colorText: "#abb2bf",
     colorAccent: "#C778DD",
     colorHover: "#fff",
-    colorTextAccent:"#fff"
+    colorTextAccent: "#fff",
+  },
+
+  media: {
+    tablet: "screen and (max-width: 768px)",
+    mobile: "screen and (max-width: 576px)",
   },
 };

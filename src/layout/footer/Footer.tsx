@@ -52,7 +52,7 @@ const StyledFooter = styled.footer`
 
 const WrapperFooterContent = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto 1fr;
   height: 100%;
 `;
 
@@ -66,11 +66,12 @@ const ProfessionDescription = styled.div`
   font-weight: 400;
   line-height: 21px;
   margin-top: 32px;
+  gap: 10px;
 
 
-  Logo{
+  /* Logo{
     grid-column: 1/2;
-  }
+  } */
   /* width: 50%; */
   /* flex-grow: 1; */
 `;
@@ -79,6 +80,7 @@ const ProfessionDescription = styled.div`
 const Email = styled.span`
   grid-column: 2/3;
   align-self: center;
+  white-space: nowrap;
   
 `
 const Text = styled.span`
@@ -95,6 +97,7 @@ const SocialList = styled.ul`
   grid-column: 2/3;
   display: flex;
   gap: 8px;
+  transform: translateX(-5px)
   /* width: 50%; */
   /* flex-grow: 1; */
 `;

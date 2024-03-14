@@ -18,6 +18,8 @@ export const Logo = (props: any) => {
 };
 
 const Name = styled.span`
+
   color:${(props) => props.theme.colors.colorTextAccent};
   white-space: nowrap;
+  flex-grow: 1;
 `

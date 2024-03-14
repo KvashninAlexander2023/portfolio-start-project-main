@@ -74,6 +74,7 @@ const MessageWrapper = styled.div`
     
     a{
       color: ${(props) => props.theme.colors.colorText};
+      transform: translateX(-5px)
     }
 
 `
