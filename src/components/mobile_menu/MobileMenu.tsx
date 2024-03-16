@@ -8,9 +8,9 @@ export const MobileMenu = () => {
   return (
     <StyledMenu>
       <WrapperLogo>
-        <Logo/>
+        <Logo />
       </WrapperLogo>
-      <BurgerButton isOpen={true}>
+      <BurgerButton isOpen={false}>
         <span></span>
       </BurgerButton>
       <MenuPopup isOpen={true}>
@@ -35,7 +35,7 @@ export const MobileMenu = () => {
           </ListItem>
         </ul>
         <SocialIconsStyled>
-          <SocialIcons/>
+          <SocialIcons />
         </SocialIconsStyled>
       </MenuPopup>
     </StyledMenu>
@@ -44,7 +44,6 @@ export const MobileMenu = () => {
 
 const StyledMenu = styled.nav`
   display: none;
-
 
   @media ${myTheme.media.tablet} {
     display: block;
@@ -56,34 +55,35 @@ const WrapperLogo = styled.div`
   top: 20px;
   left: 15px;
   z-index: 99999;
-`
+`;
 
-
-const MenuPopup = styled.div<{isOpen: boolean}>`
+const MenuPopup = styled.div<{ isOpen: boolean }>`
   position: fixed;
-  top:0;
-  left:0;
-  right:0;
+  top: 0;
+  left: 0;
+  right: 0;
   bottom: 0;
   z-index: 9999;
-  background-color:  ${(props) => props.theme.colors.colorBG};
- 
+  background-color: ${(props) => props.theme.colors.colorBG};
+  padding: 1px;
+
   display: none;
 
+  ${(props) =>
+    props.isOpen &&
+    css<{ isOpen: boolean }>`
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    `}
 
-  ${props => props.isOpen && css<{isOpen: boolean}>`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-  `}
-
-  /* @media ${myTheme.media.mobile} {
-    height: 100%;
-    width: 100%;
-    justify-content: flex-start;
-    align-items: flex-start;
-  } */
+  @media ${myTheme.media.mobile} {
+  /* scale: 0.99; */
+    /* height: 100vh;
+    width: 100vh; */
+    /* justify-content: flex-start;
+    align-items: flex-start; */
+  }
 
   ul {
     display: flex;
@@ -96,17 +96,16 @@ const MenuPopup = styled.div<{isOpen: boolean}>`
       position: absolute;
       top: 95px;
       left: 16px;
+    }
   }
-  }
-
 `;
 
-const BurgerButton = styled.button<{isOpen: boolean}>`
+const BurgerButton = styled.button<{ isOpen: boolean }>`
   position: fixed;
-  width: 100px;
-  height: 100px;
-  top: -55px;
-  right: -45px;
+  width: 60px;
+  height: 60px;
+  top: 0px;
+  right: 0px;
   z-index: 89999;
   span {
     display: block;
@@ -115,13 +114,14 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
     /* color: ${(props) => props.theme.colors.colorText}; */
     background-color: ${(props) => props.theme.colors.colorText};
     position: absolute;
-    left: 0;
-    bottom: 0;
+    right: 20px;
+    top: 36px;
 
-    ${props => props.isOpen && css<{isOpen: boolean}>`
-      transform: rotate(45deg);
-    
-    `}
+    ${(props) =>
+      props.isOpen &&
+      css<{ isOpen: boolean }>`
+        transform: rotate(45deg);
+      `}
 
     &::before {
       content: "";
@@ -134,18 +134,17 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
       bottom: 0;
       transform: translateY(5px) translateX(9px);
 
-      ${props => props.isOpen && css<{isOpen: boolean}>`
-
-        width: 24px;
-        transform: rotate(-90deg);
-    
-    `}
+      ${(props) =>
+        props.isOpen &&
+        css<{ isOpen: boolean }>`
+          width: 24px;
+          transform: rotate(-90deg);
+        `}
     }
   }
 `;
 
 const ListItem = styled.li<{ props?: "any" }>`
-
   select {
     font-size: 32px;
     background-color: ${(props) => props.theme.colors.colorBG};
@@ -182,7 +181,6 @@ const Link = styled.a`
   /* text-align: center; */
 `;
 
-
 const SocialIconsStyled = styled.div`
   position: absolute;
   bottom: 32px;
@@ -201,17 +199,16 @@ const SocialIconsStyled = styled.div`
     color: ${(props) => props.theme.colors.colorHover};
   }
 
-    //z-index: 99999;
-    //flex-direction: row;
-    //align-items: flex-start;
-    /* justify-content: fit-content; */
-    //position: absolute;
-    //left: 50%;
-    //bottom: 16px;
-    /* top: 90vh; */
-    /* top: 90%; */
-    /* top: calc(100vh - 64px); */
-    //transform: scale(2) ;//translateX(-25%);
-    //eight: 0%; 
- 
+  //z-index: 99999;
+  //flex-direction: row;
+  //align-items: flex-start;
+  /* justify-content: fit-content; */
+  //position: absolute;
+  //left: 50%;
+  //bottom: 16px;
+  /* top: 90vh; */
+  /* top: 90%; */
+  /* top: calc(100vh - 64px); */
+  //transform: scale(2) ;//translateX(-25%);
+  //eight: 0%;
 `;

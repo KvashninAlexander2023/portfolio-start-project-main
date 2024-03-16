@@ -17,7 +17,9 @@ export const Header = () => {
           <SocialIcons/>
         </SocialIconsStyled>
         <FlexWrapper justify="space-between" align="center">
-          <Logo />
+          <LogoWrapper>
+            <Logo />
+          </LogoWrapper>
           <Menu />
           <MobileMenu/>
         </FlexWrapper>
@@ -28,6 +30,7 @@ export const Header = () => {
 
 const StyledHeader = styled.header`
   background-color: ${(props) => `${props.theme.colors.colorBG}`};
+  height: 35px;
   padding: 32px 0 8px 0;
   /* backdrop-filter: blur(5px); //задает размытие background */
   position: fixed;
@@ -35,6 +38,7 @@ const StyledHeader = styled.header`
   left: 0;
   right: 0;
   z-index: 888;
+  
   /* @media ${myTheme.media.tablet} {
     position: absolute;
     top:0;
@@ -69,6 +73,13 @@ const SocialIconsStyled = styled.div`
 
 `;
 
+
+const LogoWrapper = styled.div`
+  @media ${myTheme.media.tablet} {
+    display: none;
+  }
+
+`
 
 /* position: absolute;
     top: calc(0%-205px);
