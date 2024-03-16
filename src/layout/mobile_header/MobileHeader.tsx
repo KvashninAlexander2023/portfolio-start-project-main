@@ -7,11 +7,13 @@ import { FlexWrapper } from "../../components/FlexWrapper";
 import { Icon } from "../../components/icon/Icon";
 import { myTheme } from "../../styles/Theme.styled";
 
+// ЭТО лишняя компонента
+
 export const Header = () => {
   return (
     <StyledHeader>
       <Container>
-        <SocialIcons>
+        {/* <SocialIcons>
           <a href="#">
             <Icon iconId={"github"} />
           </a>
@@ -21,7 +23,7 @@ export const Header = () => {
           <a href="#">
             <Icon iconId={"discord"} />
           </a>
-        </SocialIcons>
+        </SocialIcons> */}
         <FlexWrapper justify="space-between" align="center">
           <Logo />
           <Menu />

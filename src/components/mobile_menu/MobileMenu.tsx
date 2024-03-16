@@ -2,6 +2,7 @@ import React from "react";
 import styled, { css } from "styled-components";
 import { myTheme } from "../../styles/Theme.styled";
 import { Logo } from "../logo/Logo";
+import { SocialIcons } from "../socialIcons/SocialIcons";
 
 export const MobileMenu = () => {
   return (
@@ -33,6 +34,9 @@ export const MobileMenu = () => {
             </select>
           </ListItem>
         </ul>
+        <SocialIconsStyled>
+          <SocialIcons/>
+        </SocialIconsStyled>
       </MenuPopup>
     </StyledMenu>
   );
@@ -74,13 +78,25 @@ const MenuPopup = styled.div<{isOpen: boolean}>`
     
   `}
 
+  /* @media ${myTheme.media.mobile} {
+    height: 100%;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+  } */
 
   ul {
     display: flex;
-    gap: 30px;
+    gap: 36px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    @media ${myTheme.media.mobile} {
+      align-items: flex-start;
+      position: absolute;
+      top: 95px;
+      left: 16px;
+  }
   }
 
 `;
@@ -129,7 +145,9 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
 `;
 
 const ListItem = styled.li<{ props?: "any" }>`
+
   select {
+    font-size: 32px;
     background-color: ${(props) => props.theme.colors.colorBG};
     border: none;
     outline: none;
@@ -145,7 +163,7 @@ const ListItem = styled.li<{ props?: "any" }>`
 `;
 const Link = styled.a`
   font-family: "Fira Code", sans-serif;
-  font-size: 16px;
+  font-size: 32px;
   font-weight: 400;
   color: inherit;
   position: relative;
@@ -162,4 +180,38 @@ const Link = styled.a`
   }
 
   /* text-align: center; */
+`;
+
+
+const SocialIconsStyled = styled.div`
+  position: absolute;
+  bottom: 32px;
+  /* top: 100px; */
+  /* left: 50%; */
+  display: flex;
+  transform: scale(2);
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+
+  a {
+    color: ${(props) => props.theme.colors.colorText};
+  }
+  a:hover {
+    color: ${(props) => props.theme.colors.colorHover};
+  }
+
+    //z-index: 99999;
+    //flex-direction: row;
+    //align-items: flex-start;
+    /* justify-content: fit-content; */
+    //position: absolute;
+    //left: 50%;
+    //bottom: 16px;
+    /* top: 90vh; */
+    /* top: 90%; */
+    /* top: calc(100vh - 64px); */
+    //transform: scale(2) ;//translateX(-25%);
+    //eight: 0%; 
+ 
 `;

@@ -7,22 +7,15 @@ import { FlexWrapper } from "../../components/FlexWrapper";
 import { Icon } from "../../components/icon/Icon";
 import { myTheme } from "../../styles/Theme.styled";
 import { MobileMenu } from "../../components/mobile_menu/MobileMenu";
+import { SocialIcons } from "../../components/socialIcons/SocialIcons";
 
 export const Header = () => {
   return (
     <StyledHeader>
       <Container>
-        <SocialIcons>
-          <a href="#">
-            <Icon iconId={"github"} />
-          </a>
-          <a href="#">
-            <Icon iconId={"telegram"} />
-          </a>
-          <a href="#">
-            <Icon iconId={"discord"} />
-          </a>
-        </SocialIcons>
+        <SocialIconsStyled>
+          <SocialIcons/>
+        </SocialIconsStyled>
         <FlexWrapper justify="space-between" align="center">
           <Logo />
           <Menu />
@@ -34,7 +27,7 @@ export const Header = () => {
 };
 
 const StyledHeader = styled.header`
-  background-color: ${(props) => `${props.theme.colors.colorBG}9`};
+  background-color: ${(props) => `${props.theme.colors.colorBG}`};
   padding: 32px 0 8px 0;
   /* backdrop-filter: blur(5px); //задает размытие background */
   position: fixed;
@@ -42,9 +35,16 @@ const StyledHeader = styled.header`
   left: 0;
   right: 0;
   z-index: 888;
+  /* @media ${myTheme.media.tablet} {
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+  z-index: 999999999999; }*/
 `;
 
-const SocialIcons = styled.div`
+const SocialIconsStyled = styled.div`
   position: fixed;
   top: 0px;
   left: 22px;
@@ -67,10 +67,8 @@ const SocialIcons = styled.div`
     color: ${(props) => props.theme.colors.colorHover};
   }
 
-  @media ${myTheme.media.tablet} {
-    display: none;
-  }
 `;
+
 
 /* position: absolute;
     top: calc(0%-205px);
