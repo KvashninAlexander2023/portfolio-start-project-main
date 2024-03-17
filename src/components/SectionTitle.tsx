@@ -22,20 +22,31 @@ const StyledDiv = styled.div<{ width?: string }>`
     content: "";
     /* display: block; */
     width: ${(props) => props.width || "500px"};
+    height: 1px;
     position: absolute;
     left: 100%;
     top: 50%;
-    border-bottom: 1px solid ${myTheme.colors.colorAccent};
+    /* border-bottom: 1px solid ${myTheme.colors.colorAccent}; */
     /* height: 1px; */
-    /* background-color: ${myTheme.colors.colorAccent}; */
-    color: ${myTheme.colors.colorAccent}; // Цвет линии
+    background-color: ${myTheme.colors.colorAccent};
+    /* color: ${myTheme.colors.colorAccent}; // Цвет линии */
     /* position:  absolute; */
     margin-left: 0.5em; //Расстояние между линией и заголовком
     font-size: 12px;
+  }
 
-    /* top: 50%; */
-    /* left: 10px;
-    right: 10px; */
+  @media screen and (max-width: 860px) {
+    &::after {
+      width: 200px;
+      /* width: calc(${(props) => props.width}/2);
+      max-width: 50vw; */
+      /* width: 50vw; */
+    }
+    @media ${myTheme.media.mobile} {
+      &::after {
+        content: none;
+      }
+    }
   }
 `;
 const StyledSectionTitle = styled.h2`
@@ -62,3 +73,4 @@ const StyledSectionTitle = styled.h2`
 //   color: ${myTheme.colors.colorAccent};
 //    margin-right: 0.2em;
 //  }
+// /* width: calc(${(props) => parseInt(props.width) / 2 || 500}px) */

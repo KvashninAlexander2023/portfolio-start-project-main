@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Icon } from "../../components/icon/Icon";
 import { Logo } from "../../components/logo/Logo";
 import { Container } from "../../components/Container";
+import { myTheme } from "../../styles/Theme.styled";
 
 export const Footer = () => {
   return (
@@ -54,6 +55,15 @@ const WrapperFooterContent = styled.div`
   display: grid;
   grid-template-columns: auto 1fr;
   height: 100%;
+
+  @media ${myTheme.media.mobile} {
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+  }
 `;
 
 const ProfessionDescription = styled.div`
@@ -97,7 +107,13 @@ const SocialList = styled.ul`
   grid-column: 2/3;
   display: flex;
   gap: 8px;
-  transform: translateX(-5px)
+  transform: translateX(-5px);
+  
+  @media ${myTheme.media.mobile} {
+    transform: translateX(0px);
+  
+  }
+  
   /* width: 50%; */
   /* flex-grow: 1; */
 `;
@@ -115,7 +131,7 @@ const Copyright = styled.small`
   grid-column: 1/3;
   /* display: grid; */
   /* justify-content: center; */
-  align-self: end;
+  /* align-self: end; */
   justify-self: center;
 `;
 
@@ -130,6 +146,13 @@ const WrapperMediaContent = styled.div`
     line-height: 31px;
     color: ${(props) => props.theme.colors.colorHover};
     margin-bottom: 12px;
-    
+  }
+
+
+  @media ${myTheme.media.mobile} {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 `;

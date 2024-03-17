@@ -30,7 +30,7 @@ export const Header = () => {
 
 const StyledHeader = styled.header`
   background-color: ${(props) => `${props.theme.colors.colorBG}`};
-  height: 35px;
+  /* height: 35px; */
   padding: 32px 0 8px 0;
   /* backdrop-filter: blur(5px); //задает размытие background */
   position: fixed;

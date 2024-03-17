@@ -33,8 +33,10 @@ export const Main = () => {
 };
 
 const StyledMain = styled.section`
+/* width: 100vw; */
   min-height: 70vh;
   display: flex;
+
 
 `;
 const SmallText = styled.span`

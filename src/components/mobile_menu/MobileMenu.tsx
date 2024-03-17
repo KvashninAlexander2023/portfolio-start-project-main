@@ -10,7 +10,7 @@ export const MobileMenu = () => {
       <WrapperLogo>
         <Logo />
       </WrapperLogo>
-      <BurgerButton isOpen={false}>
+      <BurgerButton isOpen={true}>
         <span></span>
       </BurgerButton>
       <MenuPopup isOpen={true}>
