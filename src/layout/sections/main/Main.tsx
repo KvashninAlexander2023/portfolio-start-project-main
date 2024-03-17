@@ -6,12 +6,13 @@ import photologo from "../../../assets/images/LogoFoto.svg";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Container } from "../../../components/Container";
 import { SectionLink } from "../../../components/sectionLink/SectionLink";
+import { myTheme } from "../../../styles/Theme.styled";
 
 export const Main = () => {
   return (
     <StyledMain>
       <Container>
-        <FlexWrapper align="center" justify="space-around" >
+        <FlexWrapper1 >
           <FlexWrapper align="flex-start" direction="column" justify="center">
             <Name>
               Elias is a <span>web designer</span> and
@@ -30,7 +31,7 @@ export const Main = () => {
               Currently working on <b>Portfolio</b>
             </PictureCaption>
           </FlexWrapper>
-        </FlexWrapper>
+        </FlexWrapper1>
       </Container>
     </StyledMain>
   );
@@ -40,6 +41,20 @@ const StyledMain = styled.section`
   /* width: 100vw; */
   min-height: 70vh;
   display: flex;
+  margin-top: 75px;
+  padding-top: 10px;
+`;
+
+const FlexWrapper1 = styled.div`
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-around;
+
+  @media ${myTheme.media.tablet} {
+    flex-direction: column;
+  }
+
 `;
 const SmallText = styled.span`
   max-width: 465px;
@@ -64,8 +79,8 @@ const MainTitle = styled.h1`
 `;
 
 const PhotoContainer = styled.div`
-  max-width: 460px;
-  max-height: 385px;
+  width: 460px;
+  height: 385px;
   overflow: hidden;
 
   position: relative;
@@ -96,6 +111,8 @@ const PhotoContainer = styled.div`
 `;
 
 const PictureCaption = styled.span`
+  
+  text-align: center;
   padding: 8px 0;
   font-weight: 500;
   position: relative;
@@ -109,6 +126,20 @@ const PictureCaption = styled.span`
     left: -20px;
     top: 10px;
   }
+
+  &::after {
+    content: "";
+    position: absolute;
+    
+    width: 402px;
+    height: 40px;
+    border: 1px solid ${(props) => props.theme.colors.colorText};
+
+    left: -30px;
+    top: -5%;
+    z-index: 5;
+  }
+
 
   b {
     font-weight: 600;
