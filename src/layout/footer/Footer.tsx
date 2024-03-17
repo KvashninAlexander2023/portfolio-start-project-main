@@ -45,7 +45,7 @@ export const Footer = () => {
 const StyledFooter = styled.footer`
   min-height: 208px;
   background-color: ${(props) => props.theme.colors.colorBG};
-  display: flex;
+  /* display: flex; */
   border-top: 1px solid ${(props) => props.theme.colors.colorText};
   /* justify-content: space-around;
   flex-wrap: wrap; */
@@ -53,7 +53,7 @@ const StyledFooter = styled.footer`
 
 const WrapperFooterContent = styled.div`
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 1fr 1fr;
   height: 100%;
 
   @media ${myTheme.media.mobile} {
@@ -78,12 +78,13 @@ const ProfessionDescription = styled.div`
   margin-top: 32px;
   gap: 10px;
 
+  @media screen and (max-width: 460px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
 
-  /* Logo{
-    grid-column: 1/2;
-  } */
-  /* width: 50%; */
-  /* flex-grow: 1; */
 `;
 
 
@@ -91,6 +92,9 @@ const Email = styled.span`
   grid-column: 2/3;
   align-self: center;
   white-space: nowrap;
+  @media ${myTheme.media.mobile} {
+    justify-self: center;
+  }
   
 `
 const Text = styled.span`
@@ -98,7 +102,10 @@ const Text = styled.span`
   grid-column: 1/3;
   justify-self: left;
   padding-left: 10px;
-
+   @media ${myTheme.media.mobile} {
+    text-align: center;
+    margin: 0 auto;
+  }
 `
 
 
@@ -114,11 +121,10 @@ const SocialList = styled.ul`
   
   }
   
-  /* width: 50%; */
-  /* flex-grow: 1; */
+
 `;
 const SocialItem = styled.li`
-  /* display: inline-block; */
+  
 `;
 const SocialLink = styled.a`
   color: ${(props) => props.theme.colors.colorText};

@@ -11,20 +11,24 @@ export const Main = () => {
   return (
     <StyledMain>
       <Container>
-        <FlexWrapper align="center" justify="space-around">
-          <FlexWrapper align="flex-start" direction="column" justify="center" >
-            <Name>Elias is a <span>web designer</span> and</Name>
+        <FlexWrapper align="center" justify="space-around" >
+          <FlexWrapper align="flex-start" direction="column" justify="center">
+            <Name>
+              Elias is a <span>web designer</span> and
+            </Name>
             <MainTitle>front-end developer</MainTitle>
             <SmallText>
               He crafts responsive websites where technologies meet creativity
             </SmallText>
-            <SectionLink value="Contact me!!"/>
+            <SectionLink value="Contact me!!" />
           </FlexWrapper>
           <FlexWrapper justify="center" direction="column" align="center">
             <PhotoContainer>
               <img src={photo} alt="web developer photo" />
             </PhotoContainer>
-            <PictureCaption>Currently working on <b>Portfolio</b></PictureCaption>
+            <PictureCaption>
+              Currently working on <b>Portfolio</b>
+            </PictureCaption>
           </FlexWrapper>
         </FlexWrapper>
       </Container>
@@ -33,39 +37,37 @@ export const Main = () => {
 };
 
 const StyledMain = styled.section`
-/* width: 100vw; */
+  /* width: 100vw; */
   min-height: 70vh;
   display: flex;
-
-
 `;
 const SmallText = styled.span`
-max-width: 465px;
-font-weight: 400;
-line-height: 25px;
-margin-top: 32px;
+  max-width: 465px;
+  font-weight: 400;
+  line-height: 25px;
+  margin-top: 32px;
 `;
 const Name = styled.span`
-font-size: 32px;
-font-weight: 600;
-line-height: 42px;
-color: ${(props) => props.theme.colors.colorTextAccent};
-span{
-  color:  ${(props) => props.theme.colors.colorAccent};
-}
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 42px;
+  color: ${(props) => props.theme.colors.colorTextAccent};
+  span {
+    color: ${(props) => props.theme.colors.colorAccent};
+  }
 `;
 const MainTitle = styled.h1`
-font-size: 32px;
-font-weight: 600;
-line-height: 42px;
-color:  ${(props) => props.theme.colors.colorAccent};
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 42px;
+  color: ${(props) => props.theme.colors.colorAccent};
 `;
 
 const PhotoContainer = styled.div`
   max-width: 460px;
   max-height: 385px;
   overflow: hidden;
-  
+
   position: relative;
   z-index: 1;
   & img {
@@ -94,28 +96,28 @@ const PhotoContainer = styled.div`
 `;
 
 const PictureCaption = styled.span`
-padding: 8px 0;
-font-weight: 500;
-position: relative;
-&::before{
-  content: "";
-  position: absolute;
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  background-color: ${(props) => props.theme.colors.colorAccent};
-  left: -20px ;
-  top: 10px;
-}
+  padding: 8px 0;
+  font-weight: 500;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: ${(props) => props.theme.colors.colorAccent};
+    left: -20px;
+    top: 10px;
+  }
 
-b{
-  font-weight: 600;
-}
-/* 
+  b {
+    font-weight: 600;
+  }
+  /* 
 letter-spacing: 0%; */
-/* text-align: left; */
-/* font-size: 16px; */
-`
+  /* text-align: left; */
+  /* font-size: 16px; */
+`;
 
 /* src={photo} alt="web designer photo" */
 // clip-path: inset(0 0 30% 0)

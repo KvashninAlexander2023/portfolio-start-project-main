@@ -14,14 +14,14 @@ export const Header = () => {
     <StyledHeader>
       <Container>
         <SocialIconsStyled>
-          <SocialIcons/>
+          <SocialIcons />
         </SocialIconsStyled>
         <FlexWrapper justify="space-between" align="center">
           <LogoWrapper>
             <Logo />
           </LogoWrapper>
           <Menu />
-          <MobileMenu/>
+          <MobileMenu />
         </FlexWrapper>
       </Container>
     </StyledHeader>
@@ -38,7 +38,7 @@ const StyledHeader = styled.header`
   left: 0;
   right: 0;
   z-index: 888;
-  
+
   /* @media ${myTheme.media.tablet} {
     position: absolute;
     top:0;
@@ -71,15 +71,19 @@ const SocialIconsStyled = styled.div`
     color: ${(props) => props.theme.colors.colorHover};
   }
 
+  @media screen and (max-width: 1150px) {
+    display: none;
+  }
 `;
-
 
 const LogoWrapper = styled.div`
   @media ${myTheme.media.tablet} {
-    display: none;
+    z-index: 9999999;
+    position: relative;
+    top: -12px;
+    /* display: none; */
   }
-
-`
+`;
 
 /* position: absolute;
     top: calc(0%-205px);

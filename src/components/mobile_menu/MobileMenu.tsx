@@ -7,13 +7,13 @@ import { SocialIcons } from "../socialIcons/SocialIcons";
 export const MobileMenu = () => {
   return (
     <StyledMenu>
-      <WrapperLogo>
+      {/* <WrapperLogo>
         <Logo />
-      </WrapperLogo>
-      <BurgerButton isOpen={true}>
+      </WrapperLogo> */}
+      <BurgerButton isOpen={false}>
         <span></span>
       </BurgerButton>
-      <MenuPopup isOpen={true}>
+      <MenuPopup isOpen={false}>
         <ul>
           <ListItem>
             <Link href="#">home</Link>
@@ -78,7 +78,7 @@ const MenuPopup = styled.div<{ isOpen: boolean }>`
     `}
 
   @media ${myTheme.media.mobile} {
-  /* scale: 0.99; */
+    /* scale: 0.99; */
     /* height: 100vh;
     width: 100vh; */
     /* justify-content: flex-start;
