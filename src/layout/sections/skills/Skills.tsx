@@ -6,6 +6,7 @@ import { Skill } from "./skill/Skill";
 import { Icon } from "../../../components/icon/Icon";
 import imgSkills from "../../../assets/images/GroupSkills.svg";
 import { Container } from "../../../components/Container";
+import { myTheme } from "../../../styles/Theme.styled";
 
 export const Skills = () => {
   return (
@@ -17,7 +18,7 @@ export const Skills = () => {
 
         <FlexWrapper
           justify="space-between"
-          wrap="wrap"
+          wrap="nowrap"
           height="none"
           gap="10px"
         >
@@ -26,7 +27,7 @@ export const Skills = () => {
             <img src={imgSkills}></img>
           </SectionSVG>
           <SectionSkill>
-            <FlexWrapper wrap="wrap" height="none" direction="column">
+            <FlexWrapper wrap="nowrap" height="none" direction="column">
               <Skill
                 title="Languages"
                 description="TypeScript Python JavaScript"
@@ -73,6 +74,10 @@ const SectionSVG = styled.div`
   height: 280px;
   & img {
     width: 100%;
+  }
+
+  @media ${myTheme.media.tablet} {
+    display: none;
   }
   //background-color: #ebc8c8; */
   /* width: 40%; */

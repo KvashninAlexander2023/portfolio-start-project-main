@@ -38,7 +38,7 @@ const StyledHeader = styled.header`
   left: 0;
   right: 0;
   z-index: 888;
-
+ 
   /* @media ${myTheme.media.tablet} {
     position: absolute;
     top:0;

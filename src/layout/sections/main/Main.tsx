@@ -12,7 +12,7 @@ export const Main = () => {
   return (
     <StyledMain>
       <Container>
-        <FlexWrapper1 >
+        <FlexWrapper1>
           <FlexWrapper align="flex-start" direction="column" justify="center">
             <Name>
               Elias is a <span>web designer</span> and
@@ -39,10 +39,11 @@ export const Main = () => {
 
 const StyledMain = styled.section`
   /* width: 100vw; */
-  min-height: 70vh;
+  min-height: 90vh;
   display: flex;
-  margin-top: 75px;
+  margin-top: 65px;
   padding-top: 10px;
+
 `;
 
 const FlexWrapper1 = styled.div`
@@ -54,13 +55,20 @@ const FlexWrapper1 = styled.div`
   @media ${myTheme.media.tablet} {
     flex-direction: column;
   }
-
+  @media ${myTheme.media.mobile} {
+    a {
+      display: none;
+    }
+  }
 `;
 const SmallText = styled.span`
   max-width: 465px;
   font-weight: 400;
   line-height: 25px;
   margin-top: 32px;
+  @media ${myTheme.media.mobile} {
+    margin-top: 25px;
+  }
 `;
 const Name = styled.span`
   font-size: 32px;
@@ -82,9 +90,9 @@ const PhotoContainer = styled.div`
   width: 460px;
   height: 385px;
   overflow: hidden;
-
   position: relative;
   z-index: 1;
+
   & img {
     width: 100%;
     /* height: 100%; */
@@ -108,12 +116,31 @@ const PhotoContainer = styled.div`
     z-index: 2;
     background-size: cover;
   }
+
+  @media ${myTheme.media.mobile} {
+    width: 305px;
+    height: 260px;
+    flex-grow: 1;
+
+    &::after {
+      transform: scale(0.7);
+      bottom: 38px;
+      right: 10px;
+    }
+
+    &::before {
+      left: -10px;
+      top: 55px;
+      transform: scale(0.65);
+    }
+  }
 `;
 
 const PictureCaption = styled.span`
-  
-  text-align: center;
-  padding: 8px 0;
+  display: block;
+  border: 1px solid ${myTheme.colors.colorText};
+  /* text-align: center; */
+  padding: 8px 36px;
   font-weight: 500;
   position: relative;
   &::before {
@@ -123,11 +150,12 @@ const PictureCaption = styled.span`
     width: 16px;
     height: 16px;
     background-color: ${(props) => props.theme.colors.colorAccent};
-    left: -20px;
-    top: 10px;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
-  &::after {
+  /* &::after {
     content: "";
     position: absolute;
     
@@ -138,11 +166,11 @@ const PictureCaption = styled.span`
     left: -30px;
     top: -5%;
     z-index: 5;
-  }
-
+  } */
 
   b {
     font-weight: 600;
+    color: ${myTheme.colors.colorTextAccent};
   }
   /* 
 letter-spacing: 0%; */

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import doubleQuote from "./../../../assets/images/“.svg";
 import { Container } from "../../../components/Container";
 import { FlexWrapper } from "../../../components/FlexWrapper";
+import { myTheme } from "../../../styles/Theme.styled";
 
 export const Quote = () => {
   return (
@@ -22,13 +23,28 @@ export const Quote = () => {
 const QuoteConteiner = styled.section`
   display: flex;
   min-height: 25vh;
-
+  padding: 50px 0;
 `;
 
 const QuoteBlock = styled.blockquote`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+
+  @media ${myTheme.media.mobile} {
+    p {
+      font-size: 20px;
+      padding: 24px;
+    }
+    p::after,
+    p::before {
+      transform: scale(0.8);
+    }
+    footer {
+      font-size: 20px;
+      padding: 18px;
+    }
+  }
 `;
 
 const Text = styled.p`
@@ -39,6 +55,7 @@ const Text = styled.p`
   border: 1px solid ${(props) => props.theme.colors.colorText};
   font-size: 24px;
   font-weight: 500;
+  line-height: 31px;
   /* line-height: 31px; */
   padding: 32px;
 
@@ -74,3 +91,12 @@ const Author = styled.footer`
   line-height: 31px;
   padding: 16px;
 `;
+
+// @media ${myTheme.media.tablet} {
+//   flex-direction: column;
+// }
+// @media ${myTheme.media.mobile} {
+//   a {
+//     display: none;
+//   }
+// }

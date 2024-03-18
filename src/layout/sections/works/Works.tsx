@@ -11,7 +11,7 @@ export const Works = () => {
   return (
     <StyledWorks>
       <Container>
-        <FlexWrapper direction="column" justify="center" >
+        <FlexWrapper direction="column" justify="center" gap="20px">
           <FlexWrapper justify="space-between" height="none" align="center">
             <SectionTitle width="510px">projects</SectionTitle>
             <Link href="#">View all ~~&gt;</Link>
