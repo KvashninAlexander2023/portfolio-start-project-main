@@ -23,6 +23,7 @@ export const GlobalStyles = createGlobalStyle`
   /* max-width: 1366px;
   margin: 0 auto; */
   line-height: 1.2em;
+  min-width: 360px;
 }
 
 

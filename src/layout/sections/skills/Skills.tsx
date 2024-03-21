@@ -8,6 +8,20 @@ import imgSkills from "../../../assets/images/GroupSkills.svg";
 import { Container } from "../../../components/Container";
 import { myTheme } from "../../../styles/Theme.styled";
 
+const skillsData = [
+  { title: "Tools", technologies: "VSCode Figma Pixso Linux Git Neovim Font" },
+
+  {
+    title: "Frameworks",
+    technologies: "React Vue Disnake Discord.js Flask Express.js",
+  },
+
+  { title: "Databases", technologies: "SQLite PostgreSQL Mongo" },
+  { title: "Other", technologies: "HTML CSS SCSS EJS REST Jinja" },
+
+  { title: "Languages", technologies: "TypeScript Python JavaScript" },
+];
+
 export const Skills = () => {
   return (
     <StyledSkills>
@@ -15,50 +29,23 @@ export const Skills = () => {
         <FlexWrapper height="none" align="center">
           <SectionTitle width="240px">skills</SectionTitle>
         </FlexWrapper>
-
-        <FlexWrapper
-          justify="space-between"
-          wrap="nowrap"
-          height="none"
-          gap="10px"
-        >
+        <SkillsWrapper>
           <SectionSVG>
             {/* <Icon iconId="blockSkill" width="349" height="283"  viewBox="0 0 349 283"/> */}
             <img src={imgSkills}></img>
           </SectionSVG>
           <SectionSkill>
-            <FlexWrapper wrap="nowrap" height="none" direction="column">
-              <Skill
-                title="Languages"
-                description="TypeScript Python JavaScript"
-              />
-            </FlexWrapper>
-            <FlexWrapper
-              wrap="wrap"
-              height="none"
-              direction="column"
-              gap="15px"
-            >
-              <Skill title="Databases" description="SQLite PostgreSQL Mongo" />
-              <Skill title="Other" description="HTML CSS SCSS EJS REST Jinja" />
-            </FlexWrapper>
-            <FlexWrapper
-              wrap="wrap"
-              height="none"
-              direction="column"
-              gap="15px"
-            >
-              <Skill
-                title="Tools"
-                description="VSCode Figma Pixso Linux Git Neovim Font"
-              />
-              <Skill
-                title="Frameworks"
-                description="React Vue Disnake Discord.js Flask Express.js"
-              />
-            </FlexWrapper>
+            {skillsData.map((skill, index) => {
+              return (
+                <Skill
+                  key={index}
+                  title={skill.title}
+                  technologies={skill.technologies}
+                />
+              );
+            })}
           </SectionSkill>
-        </FlexWrapper>
+        </SkillsWrapper>
       </Container>
     </StyledSkills>
   );
@@ -69,25 +56,56 @@ const StyledSkills = styled.section`
   min-height: 50vh;
   display: flex;
 `;
+
+const SkillsWrapper = styled.div`
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  @media screen and (max-width: 1024px) {
+    justify-content: center;
+    width: 100%;
+  }
+`;
+
 const SectionSVG = styled.div`
-  max-width: 350px;
-  height: 280px;
+  min-width: 350px;
+  min-height: 280px;
   & img {
     width: 100%;
   }
 
-  @media ${myTheme.media.tablet} {
+  @media screen and (max-width: 1024px) {
     display: none;
   }
   //background-color: #ebc8c8; */
   /* width: 40%; */
 `;
 const SectionSkill = styled.div`
+  max-width: 608px;
+  height: 300px;
   display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: flex-end;
+  flex-wrap: wrap-reverse;
+  flex-direction: column;
+  align-content: flex-start;
+  /* justify-content: flex-end; */
   gap: 15px;
-  width: 60%;
+  /* justify-content: space-between; */
+  /* } */
+  /* max-width: fit-content; */
   color: #abb2bf;
+
+  @media ${myTheme.media.tablet} {
+    /* justify-content: center; */
+    height: 100%;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    /* align-content: center; */
+    justify-content: center;
+    /* width: 100%; */
+  }
 `;
+
+{
+  /* <FlexWrapper wrap="nowrap" height="none" direction="column">
+              <Skill/> */
+}

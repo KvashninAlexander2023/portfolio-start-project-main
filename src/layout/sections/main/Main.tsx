@@ -12,8 +12,8 @@ export const Main = () => {
   return (
     <StyledMain>
       <Container>
-        <FlexWrapper1>
-          <FlexWrapper align="flex-start" direction="column" justify="center">
+        <FlexWrapper align="center" wrap="nowrap" justify="space-between">
+          <div>
             <Name>
               Elias is a <span>web designer</span> and
             </Name>
@@ -22,16 +22,16 @@ export const Main = () => {
               He crafts responsive websites where technologies meet creativity
             </SmallText>
             <SectionLink value="Contact me!!" />
-          </FlexWrapper>
-          <FlexWrapper justify="center" direction="column" align="center">
+          </div>
+          <div>
             <PhotoContainer>
               <img src={photo} alt="web developer photo" />
             </PhotoContainer>
             <PictureCaption>
               Currently working on <b>Portfolio</b>
             </PictureCaption>
-          </FlexWrapper>
-        </FlexWrapper1>
+          </div>
+        </FlexWrapper>
       </Container>
     </StyledMain>
   );
@@ -43,10 +43,36 @@ const StyledMain = styled.section`
   display: flex;
   margin-top: 65px;
   padding-top: 10px;
+  /* @media ${myTheme.media.mobile} {
+    height: 100dvh;
+    margin-top: 60px;
+  } */
+
+  a {
+    display: block;
+    width: fit-content;
+  }
+
+
+  @media ${myTheme.media.tablet} {
+    ${FlexWrapper}{
+      flex-wrap: wrap;
+      a {
+      display: none;
+    }
+    div+div{
+      margin: auto;
+    }
+   
+}
+  }
 
 `;
 
-const FlexWrapper1 = styled.div`
+
+
+
+const FlexWrapperForMedia = styled.div`
   display: flex;
   height: 100%;
   align-items: center;
@@ -120,7 +146,7 @@ const PhotoContainer = styled.div`
   @media ${myTheme.media.mobile} {
     width: 305px;
     height: 260px;
-    flex-grow: 1;
+    /* flex-grow: 1; */
 
     &::after {
       transform: scale(0.7);
