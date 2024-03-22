@@ -2,10 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import photoProfile from "../../../assets/images/fotoProfile.png";
 import dots from "../../../assets/images/DotsFoto.svg";
+import dots2 from "../../../assets/images/Frame30.svg";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { SectionLink } from "../../../components/sectionLink/SectionLink";
 import { Container } from "../../../components/Container";
+import { myTheme } from "../../../styles/Theme.styled";
 
 export const AboutMe = () => {
   return (
@@ -44,10 +46,16 @@ const StyledAboutMe = styled.section`
   display: flex;
   min-height: 70vh;
   /* background-color: ${(props) => props.theme.colors.colorBG}; */
+
 `;
 const GridWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
+  @media ${myTheme.media.tablet} {
+    grid-template-columns: 1fr;
+  }
+
+
 `;
 const TextConteiner = styled.div`
   margin-top: 30px;
@@ -67,6 +75,7 @@ const TextConteiner = styled.div`
     /* align-content: flex-start;
     align-self: flex-start; */
   }
+ 
 `;
 
 const PhotoContainer = styled.div`
@@ -80,6 +89,7 @@ const PhotoContainer = styled.div`
   z-index: 1;
   & img {
     width: 100%;
+    border-bottom: 1px solid ${myTheme.colors.colorAccent};
     /* height: auto; */
   }
   &::before {
@@ -92,12 +102,16 @@ const PhotoContainer = styled.div`
     z-index: -1;
   }
   &::after {
-    content: url(${dots});
+    content: url(${dots2});
     position: absolute;
-    bottom: 150px;
+    bottom: 170px;
     right: 30px;
     z-index: 2;
     background-size: cover;
+  }
+
+  @media ${myTheme.media.tablet} {
+    grid-column: 1/2;
   }
 `;
 
