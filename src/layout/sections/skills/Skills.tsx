@@ -34,7 +34,7 @@ export const Skills = () => {
             {/* <Icon iconId="blockSkill" width="349" height="283"  viewBox="0 0 349 283"/> */}
             <img src={imgSkills}></img>
           </SectionSVG>
-          <SectionSkill>
+          <SectionSkills>
             {skillsData.map((skill, index) => {
               return (
                 <Skill
@@ -44,7 +44,7 @@ export const Skills = () => {
                 />
               );
             })}
-          </SectionSkill>
+          </SectionSkills>
         </SkillsWrapper>
       </Container>
     </StyledSkills>
@@ -53,7 +53,7 @@ export const Skills = () => {
 
 const StyledSkills = styled.section`
   background-color: #282c33;
-  min-height: 50vh;
+  min-height: 60vh;
   display: flex;
 `;
 
@@ -80,7 +80,7 @@ const SectionSVG = styled.div`
   //background-color: #ebc8c8; */
   /* width: 40%; */
 `;
-const SectionSkill = styled.div`
+const SectionSkills = styled.div`
   max-width: 608px;
   height: 300px;
   display: flex;
@@ -98,10 +98,11 @@ const SectionSkill = styled.div`
     /* justify-content: center; */
     height: 100%;
     flex-direction: row;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     /* align-content: center; */
     justify-content: center;
     /* width: 100%; */
+    
   }
 `;
 
