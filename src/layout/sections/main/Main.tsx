@@ -72,21 +72,21 @@ const StyledMain = styled.section`
 
 
 
-const FlexWrapperForMedia = styled.div`
-  display: flex;
-  height: 100%;
-  align-items: center;
-  justify-content: space-around;
+// const FlexWrapperForMedia = styled.div`
+//   display: flex;
+//   height: 100%;
+//   align-items: center;
+//   justify-content: space-around;
 
-  @media ${myTheme.media.tablet} {
-    flex-direction: column;
-  }
-  @media ${myTheme.media.mobile} {
-    a {
-      display: none;
-    }
-  }
-`;
+//   @media ${myTheme.media.tablet} {
+//     flex-direction: column;
+//   }
+//   @media ${myTheme.media.mobile} {
+//     a {
+//       display: none;
+//     }
+//   }
+// `;
 const SmallText = styled.span`
   max-width: 465px;
   font-weight: 400;

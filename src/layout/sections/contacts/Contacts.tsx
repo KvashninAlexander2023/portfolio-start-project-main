@@ -7,6 +7,7 @@ import { Container } from "../../../components/Container";
 import Email from "../../../assets/images/Email.svg";
 import { myTheme } from "../../../styles/Theme.styled";
 
+
 export const Contacts = () => {
   return (
     <StyledAboutMe>
@@ -43,7 +44,8 @@ export const Contacts = () => {
 const StyledAboutMe = styled.div`
   display: flex;
   min-height: 50vh;
-  background-color: ${(props) => props.theme.colors.colorBG};
+  /* background-color: ${(props) => props.theme.colors.colorBG}; */
+  /* opacity: 0.6; */
 `;
 
 const TextContainer = styled.div`

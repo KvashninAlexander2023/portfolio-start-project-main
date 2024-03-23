@@ -46,7 +46,7 @@ const StyledAboutMe = styled.section`
   display: flex;
   min-height: 70vh;
   /* background-color: ${(props) => props.theme.colors.colorBG}; */
-
+  /* opacity: 0.5; */
 `;
 const GridWrapper = styled.div`
   display: grid;

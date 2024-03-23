@@ -45,6 +45,7 @@ export const Works = () => {
 const StyledWorks = styled.section`
   min-height: 70vh;
   display: flex;
+  /* opacity:0.5; */
 `;
 
 const Link = styled.a`

@@ -40,7 +40,7 @@ button{
 }
 
 section{
-  background-color: ${myTheme.colors.colorBG};
+  /* background-color: ${myTheme.colors.colorBG}; */
 }
 
 `;
