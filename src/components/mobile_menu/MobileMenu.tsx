@@ -1,19 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import styled, { css } from "styled-components";
 import { myTheme } from "../../styles/Theme.styled";
 import { Logo } from "../logo/Logo";
 import { SocialIcons } from "../socialIcons/SocialIcons";
 
 export const MobileMenu = () => {
+  const [menuIsOpen, setmenuIsOpen] = useState(false);
+  const onBurgerBtnClick = () => {
+    setmenuIsOpen(!menuIsOpen);
+  };
+
   return (
     <StyledMenu>
       {/* <WrapperLogo>
         <Logo />
       </WrapperLogo> */}
-      <BurgerButton isOpen={false}>
+      <BurgerButton isOpen={menuIsOpen} onClick={onBurgerBtnClick}>
         <span></span>
       </BurgerButton>
-      <MenuPopup isOpen={false}>
+      <MenuPopup isOpen={menuIsOpen} onClick={()=> {setmenuIsOpen(false)}}>
         <ul>
           <ListItem>
             <Link href="#">home</Link>

@@ -7,6 +7,7 @@ import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Container } from "../../../components/Container";
 import { SectionLink } from "../../../components/sectionLink/SectionLink";
 import { myTheme } from "../../../styles/Theme.styled";
+import Typewriter from "typewriter-effect";
 
 export const Main = () => {
   return (
@@ -17,7 +18,18 @@ export const Main = () => {
             <Name>
               Elias is a <span>web designer</span> and
             </Name>
-            <MainTitle>front-end developer</MainTitle>
+            {/* <MainTitle>front-end developer</MainTitle> */}
+            <MainTitle>
+              <p>front-end developer</p>
+              <Typewriter
+                options={{
+                  strings: ["front-end developer"],
+                  autoStart: true,
+                  loop: true,
+                  delay: 150,
+                }}
+              />
+            </MainTitle>
             <SmallText>
               He crafts responsive websites where technologies meet creativity
             </SmallText>
@@ -53,24 +65,18 @@ const StyledMain = styled.section`
     width: fit-content;
   }
 
-
   @media ${myTheme.media.tablet} {
-    ${FlexWrapper}{
+    ${FlexWrapper} {
       flex-wrap: wrap;
       a {
-      display: none;
+        display: none;
+      }
+      div + div {
+        margin: auto;
+      }
     }
-    div+div{
-      margin: auto;
-    }
-   
-}
   }
-
 `;
-
-
-
 
 // const FlexWrapperForMedia = styled.div`
 //   display: flex;
@@ -110,6 +116,8 @@ const MainTitle = styled.h1`
   font-weight: 600;
   line-height: 42px;
   color: ${(props) => props.theme.colors.colorAccent};
+
+  p {display: none}
 `;
 
 const PhotoContainer = styled.div`
