@@ -1,91 +1,32 @@
 import React from "react";
-import styled from "styled-components";
 import { Logo } from "../../components/logo/Logo";
-import { Menu } from "../../components/menu/Menu";
+import { DesktopMenu } from "./DesktopMenu/DesktopMenu";
 import { Container } from "../../components/Container";
 import { FlexWrapper } from "../../components/FlexWrapper";
-import { Icon } from "../../components/icon/Icon";
-import { myTheme } from "../../styles/Theme.styled";
-import { MobileMenu } from "../../components/mobile_menu/MobileMenu";
+import { MobileMenu } from "./mobile_menu/MobileMenu";
 import { SocialIcons } from "../../components/socialIcons/SocialIcons";
+import { S } from "./Header_Styles";
 
-export const Header = () => {
+const menuItems = ["home", "works", "about-me", "contacts"];
+
+export const Header: React.FC = () => {
+  const [width, setWidth] = React.useState(window.innerWidth);
+  const breakpoint = 768;
+
   return (
-    <StyledHeader>
+    <S.StyledHeader>
       <Container>
-        <SocialIconsStyled>
+        <S.SocialIconsStyled>
           <SocialIcons />
-        </SocialIconsStyled>
+        </S.SocialIconsStyled>
         <FlexWrapper justify="space-between" align="center">
-          <LogoWrapper>
+          <S.LogoWrapper>
             <Logo />
-          </LogoWrapper>
-          <Menu />
-          <MobileMenu />
+          </S.LogoWrapper>
+          <DesktopMenu menuItems={menuItems} />
+          <MobileMenu menuItems={menuItems} />
         </FlexWrapper>
       </Container>
-    </StyledHeader>
+    </S.StyledHeader>
   );
 };
-
-const StyledHeader = styled.header`
-  background-color: ${(props) => `${props.theme.colors.colorBG}`};
-  /* height: 35px; */
-  padding: 32px 0 8px 0;
-  /* backdrop-filter: blur(5px); //задает размытие background */
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 888;
- 
-  /* @media ${myTheme.media.tablet} {
-    position: absolute;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-  z-index: 999999999999; }*/
-`;
-
-const SocialIconsStyled = styled.div`
-  position: fixed;
-  top: 0px;
-  left: 22px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-
-  &::before {
-    content: "";
-    width: 1px;
-    height: 190px;
-    background-color: ${(props) => props.theme.colors.colorText};
-  }
-
-  a {
-    color: ${(props) => props.theme.colors.colorText};
-  }
-  a:hover {
-    color: ${(props) => props.theme.colors.colorHover};
-  }
-
-  @media screen and (max-width: 1150px) {
-    display: none;
-  }
-`;
-
-const LogoWrapper = styled.div`
-  @media ${myTheme.media.tablet} {
-    z-index: 9999999;
-    position: relative;
-    top: -12px;
-    /* display: none; */
-  }
-`;
-
-/* position: absolute;
-    top: calc(0%-205px);
-    left: 50%;
-    transform: translateX(-50%); */
