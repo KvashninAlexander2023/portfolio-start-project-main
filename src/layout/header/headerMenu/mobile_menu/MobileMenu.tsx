@@ -12,7 +12,7 @@ export const MobileMenu: React.FC<{ menuItems: Array<string> }> = (props: {
   };
 
   return (
-    <S.MobileMenuStyled>
+    <S.MobileMenu>
       <S.BurgerButton isOpen={menuIsOpen} onClick={onBurgerBtnClick}>
         <span></span>
       </S.BurgerButton>
@@ -23,10 +23,10 @@ export const MobileMenu: React.FC<{ menuItems: Array<string> }> = (props: {
         }}
       >
         <Menu menuItems={props.menuItems} />
-        <S.SocialIconsStyled>
+        <S.SocialIcons>
           <SocialIcons />
-        </S.SocialIconsStyled>
+        </S.SocialIcons>
       </S.MenuPopup>
-    </S.MobileMenuStyled>
+    </S.MobileMenu>
   );
 };

@@ -3,7 +3,7 @@ import { myTheme } from "../../../styles/Theme.styled";
 
 //DesktopMenu
 
-const DesktopMenuStyled = styled.nav`
+const DesktopMenu = styled.nav`
   ul {
     display: flex;
     gap: 30px;
@@ -12,7 +12,7 @@ const DesktopMenuStyled = styled.nav`
 
 //MobileMenu
 
-const MobileMenuStyled = styled.nav`
+const MobileMenu = styled.nav`
   & a,
   select {
     font-size: 32px;
@@ -104,7 +104,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
   }
 `;
 
-const SocialIconsStyled = styled.div`
+const SocialIcons = styled.div`
   position: absolute;
   bottom: 32px;
   display: flex;
@@ -148,13 +148,13 @@ const Link = styled.a`
 `;
 
 export const S = {
-  DesktopMenuStyled,
-  MobileMenuStyled,
+  DesktopMenu,
+  MobileMenu,
 
   WrapperLogo,
   MenuPopup,
   BurgerButton,
-  SocialIconsStyled,
+  SocialIcons,
 
   ListItem,
   Link,

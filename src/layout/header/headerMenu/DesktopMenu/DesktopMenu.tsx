@@ -6,9 +6,9 @@ export const DesktopMenu: React.FC<{ menuItems: Array<string> }> = (props: {
   menuItems: Array<string>;
 }) => {
   return (
-    <S.DesktopMenuStyled>
+    <S.DesktopMenu>
       <Menu menuItems={props.menuItems} />
-    </S.DesktopMenuStyled>
+    </S.DesktopMenu>
   );
 };
 
