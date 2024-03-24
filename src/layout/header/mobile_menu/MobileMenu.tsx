@@ -4,7 +4,7 @@ import { myTheme } from "../../../styles/Theme.styled";
 import { SocialIcons } from "../../../components/socialIcons/SocialIcons";
 import { Menu } from "../Menu/Menu";
 
-export const MobileMenu = (props: { menuItems: Array<string> }) => {
+export const MobileMenu:React.FC<{ menuItems: Array<string> }> = (props: { menuItems: Array<string> }) => {
   const [menuIsOpen, setmenuIsOpen] = useState(false);
   const onBurgerBtnClick = () => {
     setmenuIsOpen(!menuIsOpen);
