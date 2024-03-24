@@ -1,9 +1,9 @@
 import React from "react";
 import { Logo } from "../../components/logo/Logo";
-import { DesktopMenu } from "./DesktopMenu/DesktopMenu";
+import { DesktopMenu } from "./headerMenu/DesktopMenu/DesktopMenu";
 import { Container } from "../../components/Container";
 import { FlexWrapper } from "../../components/FlexWrapper";
-import { MobileMenu } from "./mobile_menu/MobileMenu";
+import { MobileMenu } from "./headerMenu/mobile_menu/MobileMenu";
 import { SocialIcons } from "../../components/socialIcons/SocialIcons";
 import { S } from "./Header_Styles";
 

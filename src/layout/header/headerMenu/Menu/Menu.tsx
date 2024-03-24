@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { css } from "styled-components";
-import { myTheme } from "../../../styles/Theme.styled";
+import { myTheme } from "../../../../styles/Theme.styled";
 
 
 export const Menu: React.FC<{menuItems: Array<string>}> = (props: { menuItems: Array<string> }) => {

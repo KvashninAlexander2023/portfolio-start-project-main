@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { myTheme } from "../../../styles/Theme.styled";
+import { myTheme } from "../../../../styles/Theme.styled";
 import { Menu } from "../Menu/Menu";
 
 export const DesktopMenu: React.FC<{ menuItems: Array<string> }> = (props: {
@@ -8,7 +8,7 @@ export const DesktopMenu: React.FC<{ menuItems: Array<string> }> = (props: {
 }) => {
   return (
     <StyledMenu>
-      <Menu menuItems={props.menuItems}/>
+      <Menu menuItems={props.menuItems} />
     </StyledMenu>
   );
 };
@@ -23,4 +23,3 @@ const StyledMenu = styled.nav`
     display: none;
   }
 `;
-

@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import styled, { css } from "styled-components";
-import { myTheme } from "../../../styles/Theme.styled";
-import { SocialIcons } from "../../../components/socialIcons/SocialIcons";
+import { myTheme } from "../../../../styles/Theme.styled";
+import { SocialIcons } from "../../../../components/socialIcons/SocialIcons";
 import { Menu } from "../Menu/Menu";
 
-export const MobileMenu:React.FC<{ menuItems: Array<string> }> = (props: { menuItems: Array<string> }) => {
+export const MobileMenu: React.FC<{ menuItems: Array<string> }> = (props: {
+  menuItems: Array<string>;
+}) => {
   const [menuIsOpen, setmenuIsOpen] = useState(false);
   const onBurgerBtnClick = () => {
     setmenuIsOpen(!menuIsOpen);
@@ -21,7 +23,7 @@ export const MobileMenu:React.FC<{ menuItems: Array<string> }> = (props: { menuI
           setmenuIsOpen(false);
         }}
       >
-        <Menu menuItems={props.menuItems}/>
+        <Menu menuItems={props.menuItems} />
         <SocialIconsStyled>
           <SocialIcons />
         </SocialIconsStyled>
@@ -32,7 +34,8 @@ export const MobileMenu:React.FC<{ menuItems: Array<string> }> = (props: { menuI
 
 const StyledMenu = styled.nav`
   display: none;
-  & a, select {
+  & a,
+  select {
     font-size: 32px;
   }
   @media ${myTheme.media.tablet} {
